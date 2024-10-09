@@ -14,6 +14,9 @@
 		9CC2618A2CB6D4A800C8A763 /* BankingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC261892CB6D4A800C8A763 /* BankingAppTests.swift */; };
 		9CC261942CB6D4A800C8A763 /* BankingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC261932CB6D4A800C8A763 /* BankingAppUITests.swift */; };
 		9CC261962CB6D4A800C8A763 /* BankingAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC261952CB6D4A800C8A763 /* BankingAppUITestsLaunchTests.swift */; };
+		9CC261A52CB6D51100C8A763 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC261A42CB6D51100C8A763 /* View+Extensions.swift */; };
+		9CC261A72CB6D58D00C8A763 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC261A62CB6D58D00C8A763 /* URL+Extensions.swift */; };
+		9CC261A92CB6D61400C8A763 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC261A82CB6D61400C8A763 /* Double+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		9CC2618F2CB6D4A800C8A763 /* BankingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC261932CB6D4A800C8A763 /* BankingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankingAppUITests.swift; sourceTree = "<group>"; };
 		9CC261952CB6D4A800C8A763 /* BankingAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankingAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9CC261A42CB6D51100C8A763 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		9CC261A62CB6D58D00C8A763 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
+		9CC261A82CB6D61400C8A763 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,12 @@
 		9CC261772CB6D4A600C8A763 /* BankingApp */ = {
 			isa = PBXGroup;
 			children = (
+				9CC261AA2CB6D6F400C8A763 /* Models */,
+				9CC261AC2CB6D70800C8A763 /* Views */,
+				9CC261AB2CB6D70200C8A763 /* Screens */,
+				9CC261A32CB6D4EF00C8A763 /* ViewModels */,
+				9CC261A22CB6D4DD00C8A763 /* Extensions */,
+				9CC261AD2CB6D72100C8A763 /* Services */,
 				9CC261782CB6D4A600C8A763 /* BankingAppApp.swift */,
 				9CC2617A2CB6D4A600C8A763 /* ContentView.swift */,
 				9CC2617C2CB6D4A800C8A763 /* Assets.xcassets */,
@@ -125,6 +137,51 @@
 				9CC261952CB6D4A800C8A763 /* BankingAppUITestsLaunchTests.swift */,
 			);
 			path = BankingAppUITests;
+			sourceTree = "<group>";
+		};
+		9CC261A22CB6D4DD00C8A763 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9CC261A42CB6D51100C8A763 /* View+Extensions.swift */,
+				9CC261A62CB6D58D00C8A763 /* URL+Extensions.swift */,
+				9CC261A82CB6D61400C8A763 /* Double+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9CC261A32CB6D4EF00C8A763 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9CC261AA2CB6D6F400C8A763 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9CC261AB2CB6D70200C8A763 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		9CC261AC2CB6D70800C8A763 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9CC261AD2CB6D72100C8A763 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +315,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CC2617B2CB6D4A600C8A763 /* ContentView.swift in Sources */,
+				9CC261A72CB6D58D00C8A763 /* URL+Extensions.swift in Sources */,
+				9CC261A52CB6D51100C8A763 /* View+Extensions.swift in Sources */,
 				9CC261792CB6D4A600C8A763 /* BankingAppApp.swift in Sources */,
+				9CC261A92CB6D61400C8A763 /* Double+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
