@@ -21,7 +21,8 @@ struct AccountSummaryScreen: View {
         .onAppear{
             self.accountSummaryVM.getAllAcounts()
         }
-           
+        .navigationTitle("Account Summary")
+        .embedInNavigationView()
     }
 }
 

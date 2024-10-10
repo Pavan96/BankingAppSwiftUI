@@ -20,12 +20,13 @@ class AccountSummaryViewModel: ObservableObject {
             switch result {
             case .success(let account):
                 if let accounts = account {
-                    self.accounts = accounts.map(AccountViewModel.init)
+                    DispatchQueue.main.async {
+                        self.accounts = accounts.map(AccountViewModel.init)
+                    }
                 }
                 
             case .failure(let error):
                 print(error.localizedDescription)
-    
             }
         }
     }
