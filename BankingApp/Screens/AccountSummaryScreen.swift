@@ -12,12 +12,18 @@ struct AccountSummaryScreen: View {
     @ObservedObject private var accountSummaryVM = AccountSummaryViewModel()
     
     var body: some View {
-       
         VStack {
-            AccountListView(accounts: self.accountSummaryVM.accounts)
-            Text("\(accountSummaryVM.total.formatAsCurrency())")
-            
+            GeometryReader{ g in
+                VStack {
+                    AccountListView(accounts: self.accountSummaryVM.accounts)
+                        .frame(height: g.size.height/2)
+                    Text("\(accountSummaryVM.total.formatAsCurrency())")
+                    Spacer()
+                    
+                }
+            }
         }
+                   
         .onAppear{
             self.accountSummaryVM.getAllAcounts()
         }
