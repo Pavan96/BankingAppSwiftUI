@@ -23,11 +23,16 @@ class AccountService {
                 return completion(.failure(.noData))
             }
             
-            let account = try? JSONDecoder().decode([Account].self, from: data)
-            if account == nil {
-                completion(.failure(.decodingError))
-            } else {
-                completion(.success(account))
+            do {
+                let accounts = try JSONDecoder().decode([Account].self, from: data)
+                if accounts == nil {
+                    completion(.failure(.decodingError))
+                } else {
+                    completion(.success(accounts))
+                }
+            } catch (let error) {
+                print(error.localizedDescription.debugDescription)
+                print(error.localizedDescription.description)
             }
             
         }.resume()

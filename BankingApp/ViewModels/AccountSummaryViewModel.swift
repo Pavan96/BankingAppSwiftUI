@@ -9,20 +9,18 @@ import Foundation
 
 class AccountSummaryViewModel: ObservableObject {
     
-    var account:[AccountViewModel] = [AccountViewModel]()
+    @Published var accounts:[AccountViewModel] = [AccountViewModel]()
     
     var total: Double  {
-        account.map { $0.balance }.reduce(0, +)
+        accounts.map { $0.balance }.reduce(0, +)
     }
     
     func getAllAcounts() {
-        
         AccountService.shared.getAllAccounts { result in
-            
             switch result {
             case .success(let account):
                 if let accounts = account {
-                    self.account = accounts.map(AccountViewModel.init)
+                    self.accounts = accounts.map(AccountViewModel.init)
                 }
                 
             case .failure(let error):
@@ -41,8 +39,8 @@ class AccountViewModel {
         self.account = account
     }
     
-    var id: String {
-        account.id.uuidString
+    var accountId: String {
+        account.id
     }
     
     var name: String {
