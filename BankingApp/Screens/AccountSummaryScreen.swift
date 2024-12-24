@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct AccountSummaryScreen: View {
-    
     @ObservedObject private var accountSummaryVM = AccountSummaryViewModel()
     
     var body: some View {
@@ -19,7 +18,6 @@ struct AccountSummaryScreen: View {
                         .frame(height: g.size.height/2)
                     Text("\(accountSummaryVM.total.formatAsCurrency())")
                     Spacer()
-                    
                 }
             }
         }

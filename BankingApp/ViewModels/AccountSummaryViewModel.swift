@@ -7,7 +7,6 @@
 import Foundation
 
 class AccountSummaryViewModel: ObservableObject {
-    
     @Published var accounts:[AccountViewModel] = [AccountViewModel]()
     
     var total: Double  {
@@ -32,7 +31,6 @@ class AccountSummaryViewModel: ObservableObject {
 }
 
 class AccountViewModel {
-    
     let account: Account
     
     init(account: Account) {
