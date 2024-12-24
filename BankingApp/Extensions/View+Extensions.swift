@@ -2,9 +2,8 @@
 //  View+Extensions.swift
 //  BankingApp
 //
-//  Created by Pavan More on 09/10/24.
+//  Created by Pavan on 09/10/24.
 //
-
 import Foundation
 import SwiftUI
 

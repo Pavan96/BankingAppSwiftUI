@@ -25,6 +25,7 @@ struct AccountListView_Previews: PreviewProvider {
     }
 }
 
+// Account cell 
 struct AccountCell: View {
     let account: AccountViewModel
     

@@ -18,7 +18,6 @@ class AccountService {
             return completion(.failure(.badUrl))
         }
         
-        
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data else {
                 return completion(.failure(.noData))
