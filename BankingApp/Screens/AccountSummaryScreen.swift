@@ -23,7 +23,6 @@ struct AccountSummaryScreen: View {
                 }
             }
         }
-                   
         .onAppear{
             self.accountSummaryVM.getAllAcounts()
         }

@@ -8,23 +8,19 @@
 import SwiftUI
 
 struct AccountListView: View {
-    
     let accounts: [AccountViewModel]
     
     var body: some View {
         List(accounts, id: \.accountId) { account in
             AccountCell(account: account)
-            
         }.listStyle(.plain)
     }
 }
 
 struct AccountListView_Previews: PreviewProvider {
     static var previews: some View {
-        
         let account = Account(id: UUID().uuidString, name: "Blake", accountType: .saving, balance: 304)
         let accountVM = AccountViewModel(account: account)
-        
         return AccountListView(accounts: [accountVM])
     }
 }
