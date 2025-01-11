@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct CreateAccountRequest: Codable {
+    
+    let name: String
+    let accounType: String
+    let balance: Double
+}
